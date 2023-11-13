@@ -22,6 +22,7 @@ def get_embedding(question):
     return response.data[0].embedding
 
 def create_faq_embedding():
+    print("Creating embeddings... (only uses the 41 first questions, see readme)")
     qa_pairs = json.loads(open("FAQ.json").read())[:41]
     # [
     #    {
